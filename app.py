@@ -1,6 +1,5 @@
 import os
 import sys
-import pygraphviz
 
 from flask import Flask, jsonify, request, abort, send_file
 from flask.logging import create_logger
@@ -188,7 +187,7 @@ def webhook_handler():
     return "OK"
  
 if __name__ == "__main__":
-    machine.get_graph().draw("fsm.png", prog="dot", format="png")
-    port = os.environ.get("PORT", 8000)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
     app.run(host="0.0.0.0", port=port, debug=True)
 
