@@ -134,7 +134,7 @@ parser = WebhookParser(channel_secret)
 handler = WebhookHandler(channel_secret)
 mode = 0
 
-@app.route("/callback", methods=["POST"])
+@app.route("/webhook", methods=["POST"])
 def webhook_handler():
     global mode
     signature = request.headers["X-Line-Signature"]
