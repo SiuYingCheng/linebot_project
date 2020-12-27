@@ -18,4 +18,4 @@ urllib3==1.25.6
 werkzeug==0.16.0
 beautifulsoup4==4.8.1
 numpy==1.19.3
-pandas==1.2.0
+pandas==1.1.5
